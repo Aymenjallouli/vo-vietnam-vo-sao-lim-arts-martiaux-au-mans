@@ -1,0 +1,6 @@
+.vercel
+qa/
+business.json
+research.json
+pitch.json
+*.log

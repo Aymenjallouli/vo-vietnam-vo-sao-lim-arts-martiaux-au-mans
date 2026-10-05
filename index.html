@@ -1,0 +1,1022 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Võ Viêtnam / Võ Sao Lim, école d'arts martiaux au Mans</title>
+<meta name="description" content="École de Võ Vietnam et de Kung Fu Sao Lim au Mans, près de la gare. Cours le soir de 18h30 à 20h30, dès 13 ans. Tél. 06 88 28 98 08.">
+<meta property="og:title" content="Võ Viêtnam / Võ Sao Lim, école d'arts martiaux au Mans">
+<meta property="og:description" content="Võ Vietnam et Kung Fu Sao Lim, de la branche Shaolin, enseignés le soir près de la gare du Mans. Accueil toute l'année dès 13 ans.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta name="theme-color" content="#B81D24">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Crect width='36' height='36' rx='5' fill='%23B81D24'/%3E%3Crect x='5' y='5' width='26' height='26' fill='none' stroke='%23fff' stroke-opacity='.55' stroke-width='1.5'/%3E%3Cpath d='M10.5 10h4.3l3.2 10.6L21.2 10h4.3l-5.2 16h-4.6z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600&family=Sofia+Sans+Condensed:wght@700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsClub",
+  "name": "Võ Viêtnam / Võ Sao Lim - Arts Martiaux au Mans",
+  "description": "École de Võ Vietnam et de Kung Fu Sao Lim (arts martiaux sino-vietnamiens) au Mans.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "60 Rue Navarin",
+    "postalCode": "72000",
+    "addressLocality": "Le Mans",
+    "addressCountry": "FR"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 47.9974835, "longitude": 0.1951288 },
+  "telephone": "+33688289808",
+  "email": "vovietnam72@gmail.com",
+  "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJXfwah1eP4kcRVUaHVbDwJDA",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["https://schema.org/Monday", "https://schema.org/Wednesday", "https://schema.org/Friday"],
+      "opens": "18:30",
+      "closes": "20:30"
+    }
+  ],
+  "makesOffer": [
+    { "@type": "Offer", "name": "Adhésion annuelle ados/adultes (à partir de 13 ans)", "price": "120", "priceCurrency": "EUR" },
+    { "@type": "Offer", "name": "Adhésion annuelle tarif réduit (étudiants, demandeurs d'emploi, familles nombreuses)", "price": "90", "priceCurrency": "EUR" }
+  ],
+  "sameAs": ["https://www.facebook.com/vosaolimlemans/"]
+}
+</script>
+<style>
+/* ==========================================================================
+   Võ Viêtnam / Võ Sao Lim — design decisions
+   PALETTE  Lifted from the club's own photos: the red wall panels of the gym
+            (--brand #B81D24, 6.5:1 with white), the black uniforms and
+            corrugated steel (--ink), the white training mats (--bg, warmed a
+            touch so it reads as paper), and the yellow emblem on the white
+            tees (--accent, used only on dark grounds, for stars and focus).
+   MOTIF    The red tape squares laid on the mats: square "eyebrow" markers,
+            thin red rules, a faint mat grid behind the hours, and the red
+            lineage connector. No blobs, no gradients for decoration.
+   TYPE     Sofia Sans Condensed 800/700, uppercase, for display: banner-like,
+            and it fits "VÕ VIÊTNAM" large on a 375px screen. Instrument Sans
+            400/600 for reading text. 2 families, 4 weights.
+   HERO     photo-02 (horse stance against the red wall). Mobile: full bleed,
+            the name sits on the dark steel above her, actions on a scrim
+            below. Desktop: split, ink column of type + tall photo bled right.
+   RHYTHM   ink hero → light proof → white school + lineage → ink gallery →
+            ONE strong colour move (full red "Essayer" block, oversized 120 €)
+            → light hours + map → ink contact + footer.
+   ========================================================================== */
+:root{
+  --bg:#F3F1EC; --surface:#FFFFFF; --ink:#15171B; --ink-soft:#4B5058;
+  --brand:#B81D24; --brand-ink:#FFFFFF; --accent:#E2B03A; --line:#DAD6CE;
+  --ink-2:#1E2127; --on-dark:#F3F1EC; --on-dark-soft:#B4BAC3; --line-dark:rgba(243,241,236,.14);
+  --brand-deep:#93161C; --brand-bright:#EE5A5F; --brand-tint:#FBEDED; --on-brand-soft:#FBE3E4;
+  --font-display:"Sofia Sans Condensed","Arial Narrow","Roboto Condensed",Arial,sans-serif;
+  --font-text:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --step--1:clamp(.875rem,.85rem + .12vw,.9375rem);
+  --step-0:clamp(1.0625rem,1.02rem + .2vw,1.125rem);
+  --step-1:clamp(1.1875rem,1.1rem + .45vw,1.4375rem);
+  --step-2:clamp(1.5rem,1.28rem + 1vw,2.125rem);
+  --step-3:clamp(2rem,1.6rem + 2vw,3.25rem);
+  --step-4:clamp(2.625rem,1.9rem + 3.6vw,5rem);
+  --step-5:clamp(4rem,2rem + 9vw,9.5rem);
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:24px;
+  --space-6:32px; --space-7:48px; --space-8:64px; --space-9:96px;
+  --section:clamp(56px,10vw,128px);
+  --gutter:clamp(16px,5vw,40px);
+  --container:1200px;
+  --r-sm:4px; --r-md:12px; --r-pill:999px;
+  --shadow-1:0 1px 2px rgba(21,23,27,.06),0 3px 10px rgba(21,23,27,.06);
+  --shadow-2:0 2px 4px rgba(21,23,27,.06),0 14px 34px -10px rgba(21,23,27,.22);
+  --shadow-3:0 4px 10px rgba(0,0,0,.18),0 34px 70px -24px rgba(0,0,0,.55);
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --header-h:64px; --bar-h:64px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--header-h) + 12px)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-text);font-size:var(--step-0);line-height:1.6;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  padding-bottom:calc(var(--bar-h) + env(safe-area-inset-bottom))}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3{font-family:var(--font-display);font-weight:800;line-height:1;letter-spacing:-.005em;text-transform:uppercase;text-wrap:balance;margin:0}
+p{margin:0;text-wrap:pretty}
+a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:1px}
+ul,ol,dl,dd,figure,blockquote{margin:0;padding:0}
+ul,ol{list-style:none}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:2px}
+.on-dark :focus-visible,.site-header :focus-visible,.action-bar :focus-visible{outline-color:var(--accent)}
+.on-brand :focus-visible{outline-color:#fff}
+.lightbox :focus-visible{outline-color:var(--accent)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:fixed;left:12px;top:12px;z-index:100;display:inline-flex;align-items:center;min-height:44px;padding:0 18px;background:var(--brand);color:#fff;font-weight:600;border-radius:var(--r-sm);opacity:0;pointer-events:none;transform:translateY(-8px);transition:opacity .2s var(--ease),transform .2s var(--ease)}
+.skip:focus{opacity:1;pointer-events:auto;transform:none}
+.wrap{width:min(100% - 2 * var(--gutter),var(--container));margin-inline:auto}
+.section{padding-block:var(--section)}
+section[id]{scroll-margin-top:calc(var(--header-h) + 8px)}
+.ico{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+
+/* --- shared bits ------------------------------------------------------- */
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:var(--step--1);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.eyebrow::before{content:"";width:11px;height:11px;border:2px solid var(--brand);flex:none}
+.on-dark .eyebrow{color:var(--on-dark-soft)}
+.on-dark .eyebrow::before{border-color:var(--brand-bright)}
+.on-brand .eyebrow{color:var(--on-brand-soft)}
+.on-brand .eyebrow::before{border-color:#fff}
+.h2{font-size:var(--step-4);margin-top:var(--space-4)}
+.lead{font-size:var(--step-1);line-height:1.5;color:var(--ink-soft);max-width:54ch;margin-top:var(--space-5)}
+.on-dark .lead{color:var(--on-dark-soft)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:12px 22px;border-radius:var(--r-sm);border:1.5px solid transparent;
+  font:600 var(--step-0)/1.2 var(--font-text);text-decoration:none;cursor:pointer;transition:transform .25s var(--ease)}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn-brand{background:var(--brand);color:var(--brand-ink);box-shadow:var(--shadow-1)}
+.btn-brand:hover{background:var(--brand-deep)}
+.btn-light{background:#fff;color:var(--brand-deep)}
+.btn-ghost{background:transparent;color:inherit;border-color:currentColor}
+.btn-ink{background:var(--ink);color:var(--on-dark)}
+.link-arrow{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:600;text-decoration:underline;text-decoration-color:var(--brand);text-decoration-thickness:2px;text-underline-offset:6px}
+.link-arrow .ico{transition:transform .25s var(--ease)}
+.link-arrow:hover .ico{transform:translateX(3px)}
+.stars{display:inline-flex;gap:2px;color:var(--brand)}
+.stars .ico{width:18px;height:18px}
+.on-dark .stars{color:var(--accent)}
+.status{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:var(--step--1)}
+.status:empty{display:none}
+.status::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--on-dark-soft);flex:none}
+.status.is-open::before{background:#3DBE84;box-shadow:0 0 0 4px rgba(61,190,132,.22)}
+.status.is-closed::before{background:var(--brand-bright)}
+
+/* --- reveal ------------------------------------------------------------ */
+.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.js .reveal.is-in{opacity:1;transform:none}
+.js .reveal-2{transition-delay:.08s}.js .reveal-3{transition-delay:.16s}
+
+/* --- header ------------------------------------------------------------ */
+.site-header{position:sticky;top:0;z-index:50;background:var(--ink);color:var(--on-dark);border-bottom:1px solid var(--line-dark)}
+.header-in{display:flex;align-items:center;gap:var(--space-5);height:var(--header-h)}
+.brand{display:flex;align-items:center;gap:12px;min-height:44px;text-decoration:none;margin-right:auto}
+.brand-mark{width:36px;height:36px;flex:none}
+.brand-name{display:block;font:800 1.4rem/1 var(--font-display);text-transform:uppercase;letter-spacing:.01em}
+.brand-sub{display:block;margin-top:3px;font-size:.8125rem;line-height:1.1;letter-spacing:.06em;color:var(--on-dark-soft)}
+.nav{display:none}
+.nav ul{display:flex;gap:4px}
+.nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;color:var(--on-dark-soft);text-decoration:none;font-weight:600;font-size:.9375rem}
+.nav a:hover{color:#fff}
+.header-cta{display:none;min-height:44px;padding:8px 16px;font-size:.9375rem}
+.menu-btn{display:grid;place-items:center;width:48px;height:48px;margin-right:-8px;background:none;border:0;color:inherit;cursor:pointer;border-radius:var(--r-sm)}
+.menu-btn .ico{width:26px;height:26px}
+.menu-btn .i-close{display:none}
+.menu-btn[aria-expanded="true"] .i-open{display:none}
+.menu-btn[aria-expanded="true"] .i-close{display:block}
+.mobile-menu{position:fixed;inset:var(--header-h) 0 0;z-index:49;overflow-y:auto;background:var(--ink);color:var(--on-dark);
+  padding:var(--space-5) var(--gutter) calc(var(--space-7) + env(safe-area-inset-bottom));
+  display:flex;flex-direction:column;gap:var(--space-6);
+  opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .3s var(--ease),transform .3s var(--ease),visibility 0s linear .3s}
+.mobile-menu.is-open{opacity:1;visibility:visible;transform:none;transition:opacity .3s var(--ease),transform .3s var(--ease)}
+.mobile-menu nav a{display:flex;align-items:center;justify-content:space-between;min-height:64px;border-bottom:1px solid var(--line-dark);
+  font:800 2.25rem/1 var(--font-display);text-transform:uppercase;text-decoration:none}
+.mobile-menu nav a .ico{color:var(--brand-bright)}
+.mobile-menu .menu-actions{display:grid;gap:var(--space-3)}
+.mobile-menu .menu-addr{color:var(--on-dark-soft);font-size:var(--step--1)}
+html.menu-open{overflow:hidden}
+@media (min-width:768px){.header-cta{display:inline-flex}}
+@media (min-width:1024px){
+  .nav{display:block}
+  .menu-btn,.mobile-menu{display:none}
+}
+
+/* --- hero ---------------------------------------------------------------- */
+.hero{position:relative;isolation:isolate;overflow:hidden;display:flex;background:var(--ink);color:var(--on-dark);
+  min-height:calc(100vh - var(--header-h) - var(--bar-h));
+  min-height:max(560px,calc(100svh - var(--header-h) - var(--bar-h)))}
+.hero-media{position:absolute;inset:0;z-index:-1;overflow:hidden;background:#22252b}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;transform-origin:50% 42%;animation:kenburns 28s var(--ease) infinite alternate}
+.hero-media::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(13,15,18,.74) 0%,rgba(13,15,18,.3) 30%,rgba(13,15,18,0) 42%,rgba(13,15,18,0) 54%,rgba(13,15,18,.72) 72%,rgba(13,15,18,.95) 90%)}
+@keyframes kenburns{from{transform:scale(1.02)}to{transform:scale(1.1) translate3d(0,-1.2%,0)}}
+.hero-in{flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:var(--space-6);padding:var(--space-5) var(--gutter) var(--space-6)}
+.hero h1{margin-top:var(--space-3);font-size:clamp(3.9rem,1rem + 12.4vw,7.25rem);line-height:.88;letter-spacing:-.01em}
+.hero h1 span{display:block}
+.hero h1 .h1-2{color:var(--brand-bright)}
+.hero .eyebrow{color:var(--on-dark)}
+.chip{display:inline-flex;align-items:center;gap:8px;min-height:40px;margin-top:var(--space-5);padding:6px 16px 6px 12px;border-radius:var(--r-pill);
+  background:rgba(13,15,18,.55);border:1px solid rgba(243,241,236,.3);color:var(--on-dark);text-decoration:none;font-weight:600;font-size:var(--step--1)}
+.chip .ico{width:16px;height:16px;color:var(--accent)}
+.chip strong{font-weight:600}
+.chip-sep{opacity:.5}
+.hero-lead{font-size:var(--step-0);line-height:1.5;max-width:34ch;text-shadow:0 1px 14px rgba(0,0,0,.4)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:var(--space-3);margin-top:var(--space-5)}
+.hero-cta .btn{flex:1 1 auto}
+.hero-cta .btn-ghost{display:none}
+.hero .status{display:none;margin-top:var(--space-4);color:var(--on-dark)}
+.hero-facts,.lg-only{display:none}
+@media (min-width:640px){
+  .hero-cta .btn{flex:0 0 auto}
+  .hero-cta .btn-ghost{display:inline-flex}
+  .hero .status:not(:empty){display:inline-flex}
+  .hero-lead{font-size:var(--step-1)}
+}
+@media (min-width:768px){
+  .hero{min-height:max(600px,calc(100svh - var(--header-h)))}
+}
+@media (min-width:960px){
+  .hero{display:grid;grid-template-columns:minmax(0,1fr) min(42vw,640px);min-height:clamp(640px,calc(100svh - var(--header-h)),880px)}
+  .hero-media{position:relative;inset:auto;grid-column:2;grid-row:1;z-index:0}
+  .hero-media::after{background:linear-gradient(90deg,rgba(21,23,27,.35),rgba(21,23,27,0) 22%)}
+  .hero-media::before{content:"";position:absolute;z-index:1;left:28px;bottom:28px;width:72px;height:72px;border-left:3px solid var(--brand);border-bottom:3px solid var(--brand)}
+  .hero-in{grid-column:1;grid-row:1;justify-content:center;gap:0;
+    padding:var(--space-7) var(--space-8) var(--space-7) max(var(--gutter),calc((100vw - var(--container)) / 2 - 8px))}
+  .hero h1{font-size:min(7.8vw,7.5rem)}
+  .hero-lead{margin-top:var(--space-5);max-width:36ch;text-shadow:none;color:var(--on-dark-soft)}
+  .lg-only{display:inline}
+  .hero-facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:var(--space-7);margin-top:var(--space-6);padding-top:var(--space-5);border-top:1px solid var(--line-dark)}
+  .hero-facts li{font:700 clamp(1.3rem,.5rem + 1.3vw,2.125rem)/1 var(--font-display);text-transform:uppercase;white-space:nowrap}
+  .hero-facts span{display:block;margin-bottom:8px;font:600 .8125rem/1 var(--font-text);letter-spacing:.12em;color:var(--on-dark-soft)}
+}
+
+/* --- proof --------------------------------------------------------------- */
+.proof-head{display:grid;gap:var(--space-7)}
+.score{display:grid;grid-template-columns:auto 1fr;align-items:end;gap:var(--space-2) var(--space-5);padding-top:var(--space-5);border-top:3px solid var(--brand)}
+.score-num{font:800 var(--step-5)/.8 var(--font-display);color:var(--brand);letter-spacing:-.02em;grid-row:span 2}
+.score-count{font-weight:600;font-size:var(--step-1);line-height:1.2}
+.score .link-arrow{grid-column:1 / -1;margin-top:var(--space-3)}
+.rail-wrap{margin-top:var(--space-8)}
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:min(86%,400px);gap:var(--space-4);overflow-x:auto;overscroll-behavior-x:contain;
+  scroll-snap-type:x mandatory;scroll-padding-inline:var(--gutter);padding:var(--space-2) var(--gutter) var(--space-5);margin-inline:calc(-1 * var(--gutter));scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail:focus-visible{outline-offset:-3px}
+.review{scroll-snap-align:start;display:flex;flex-direction:column;gap:var(--space-4);padding:var(--space-6) var(--space-5) var(--space-5);
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);box-shadow:var(--shadow-1);position:relative}
+.review::before{content:"«";position:absolute;right:20px;top:6px;font:800 4.5rem/1 var(--font-display);color:var(--brand);opacity:.16}
+.review blockquote{font-size:var(--step-1);line-height:1.5}
+.review figcaption{margin-top:auto;padding-top:var(--space-4);border-top:1px solid var(--line);display:flex;align-items:baseline;justify-content:space-between;gap:var(--space-3)}
+.review-author{font-weight:600}
+.review-date{color:var(--ink-soft);font-size:var(--step--1)}
+.rail-nav{display:flex;align-items:center;gap:var(--space-3);margin-top:var(--space-2)}
+.rail-btn{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;border:1.5px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;transition:transform .25s var(--ease),opacity .25s var(--ease)}
+.rail-btn:hover{transform:scale(1.06)}
+.rail-btn[disabled]{opacity:.3;cursor:default;transform:none}
+.rail-hint{margin-left:auto;color:var(--ink-soft);font-size:var(--step--1)}
+@media (min-width:960px){
+  .proof-head{grid-template-columns:7fr 5fr;align-items:end;gap:var(--space-9)}
+  .score{margin-bottom:6px}
+}
+
+/* --- school -------------------------------------------------------------- */
+.school{background:var(--surface)}
+.school-grid{display:grid;gap:var(--space-8)}
+.disciplines{margin-top:var(--space-7);border-top:1px solid var(--line)}
+.disciplines li{display:grid;grid-template-columns:auto 1fr;column-gap:var(--space-5);padding-block:var(--space-6);border-bottom:1px solid var(--line)}
+.disciplines .num{grid-row:span 3;font:800 var(--step-2)/1 var(--font-display);color:var(--brand);padding-top:.15em}
+.disciplines h3{font-size:var(--step-3)}
+.disc-sub{margin-top:var(--space-2);font-size:var(--step--1);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--brand)}
+.disciplines p:last-child{margin-top:var(--space-3);color:var(--ink-soft);max-width:52ch}
+.lineage{align-self:start;background:var(--ink);color:var(--on-dark);border-radius:var(--r-md);padding:var(--space-6) var(--space-5);box-shadow:var(--shadow-2)}
+.lineage figcaption{margin-bottom:var(--space-5)}
+.lin-top{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3)}
+.lin-node{padding:var(--space-4);border:1px solid var(--line-dark);border-radius:var(--r-sm);background:var(--ink-2)}
+.lin-node strong{display:block;font:700 var(--step-1)/1.05 var(--font-display);text-transform:uppercase}
+.lin-role{display:block;margin-bottom:6px;font-size:.8125rem;line-height:1.3;letter-spacing:.08em;text-transform:uppercase;color:var(--on-dark-soft)}
+.lin-join{position:relative;height:26px;margin-inline:calc((100% - var(--space-3)) / 4);border:2px solid var(--brand-bright);border-top:0}
+.lin-join::after{content:"";position:absolute;left:50%;top:100%;width:2px;height:26px;margin-left:-1px;background:var(--brand-bright)}
+.lin-main{margin-top:26px;background:var(--brand);border-color:var(--brand);text-align:center}
+.lin-main strong{font-size:var(--step-2)}
+.lin-main .lin-role{color:var(--on-brand-soft)}
+.lin-school{margin-top:var(--space-4);text-align:center;color:var(--on-dark-soft);font-size:var(--step--1)}
+.lineage blockquote{margin-top:var(--space-6);padding-top:var(--space-5);border-top:1px solid var(--line-dark);font-size:var(--step-0);line-height:1.55}
+.lineage cite{display:block;margin-top:var(--space-3);font-style:normal;font-size:var(--step--1);color:var(--on-dark-soft)}
+.practice{border-top:3px solid var(--ink);padding-top:var(--space-6)}
+.practice h3{font-size:var(--step-2)}
+.practice dl{display:grid;gap:var(--space-5);margin-top:var(--space-6)}
+.practice dl > div{display:grid;gap:var(--space-2);padding-bottom:var(--space-5);border-bottom:1px solid var(--line)}
+.practice dt{font:800 var(--step-3)/1 var(--font-display);text-transform:uppercase;color:var(--brand)}
+.practice dd{max-width:44ch}
+.practice dd small{display:block;margin-top:var(--space-2);font-size:var(--step--1);color:var(--ink-soft)}
+@media (min-width:960px){
+  .school-grid{grid-template-columns:7fr 5fr;column-gap:var(--space-8)}
+  .lineage{margin-top:var(--space-9);padding:var(--space-7) var(--space-6)}
+  .practice{grid-column:1 / -1}
+  .practice-in{display:grid;grid-template-columns:4fr 8fr;gap:var(--space-8)}
+  .practice dl{grid-template-columns:repeat(3,1fr);margin-top:0;gap:var(--space-6)}
+  .practice dl > div{border-bottom:0;border-left:1px solid var(--line);padding:0 0 0 var(--space-5);align-content:start}
+}
+
+/* --- gallery ------------------------------------------------------------ */
+.gallery{background:var(--ink);color:var(--on-dark)}
+.gallery-head{display:grid;gap:var(--space-5)}
+.gallery-head .lead{margin-top:0}
+.g-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);margin-top:var(--space-7)}
+.g-item{position:relative;display:block;width:100%;padding:0;border:0;border-radius:var(--r-md);overflow:hidden;background:var(--ink-2);cursor:zoom-in;color:#fff}
+.g-item img{width:100%;height:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .8s var(--ease)}
+.g-item:hover img{transform:scale(1.04)}
+.g-item::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);pointer-events:none}
+.g-zoom{position:absolute;right:12px;bottom:12px;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:rgba(13,15,18,.6);color:#fff}
+.g-zoom .ico{width:18px;height:18px}
+.g-wide{grid-column:span 2}
+.g-wide img{aspect-ratio:4/3}
+.g-pos-03 img{object-position:64% 50%}
+@media (min-width:960px){
+  .gallery-head{grid-template-columns:7fr 5fr;align-items:end;gap:var(--space-8)}
+  .g-grid{grid-template-columns:repeat(12,1fr);grid-template-rows:clamp(380px,40vw,540px) clamp(300px,30vw,400px);gap:var(--space-4)}
+  .g-item img,.g-wide img{aspect-ratio:auto}
+  .g-a{grid-column:1 / span 8}
+  .g-b{grid-column:9 / span 4}
+  .g-c{grid-column:1 / span 5}
+  .g-d{grid-column:6 / span 7}
+  .g-pos-03 img{object-position:50% 50%}
+}
+
+/* --- try / pricing (the red block) --------------------------------------- */
+.try{position:relative;overflow:hidden;isolation:isolate;background:var(--brand);color:#fff}
+.try::before,.try::after{content:"";position:absolute;z-index:-1;border:2px solid rgba(255,255,255,.16);pointer-events:none}
+.try::before{width:240px;height:240px;right:-90px;top:-200px}
+.try::after{width:240px;height:240px;left:-90px;bottom:-200px}
+.try-grid{display:grid;gap:var(--space-7);grid-template-areas:"head" "prices" "more"}
+.try-head{grid-area:head}.try-more{grid-area:more}.prices{grid-area:prices}
+.try-cta{margin-top:0}
+.try .lead{color:var(--on-brand-soft)}
+.try-cta{display:flex;flex-wrap:wrap;gap:var(--space-3)}
+.try-cta .btn{flex:1 1 220px}
+.try-link{margin-top:var(--space-4);color:#fff;text-decoration-color:rgba(255,255,255,.6)}
+.prices{display:grid;border-top:2px solid rgba(255,255,255,.85)}
+.price{display:grid;grid-template-columns:1fr;gap:6px;padding-block:var(--space-5);border-bottom:1px solid rgba(255,255,255,.3)}
+.price-amount{font:800 var(--step-4)/.9 var(--font-display);letter-spacing:-.01em}
+.price-main .price-amount{font-size:clamp(5.5rem,3rem + 11vw,10.5rem);line-height:.82}
+.price-label{font-weight:600;font-size:var(--step-1);line-height:1.3}
+.price-note{color:var(--on-brand-soft)}
+.price-discover h3{font-size:var(--step-4);line-height:.9}
+.bring{display:grid;gap:var(--space-5);margin-top:var(--space-7)}
+.bring > div{display:grid;grid-template-columns:auto 1fr;gap:var(--space-4);align-items:start}
+.bring .ico{width:24px;height:24px;margin-top:2px}
+.bring dt{font-weight:600}
+.bring dd{color:var(--on-brand-soft)}
+@media (min-width:960px){
+  .try-grid{grid-template-columns:6fr 6fr;grid-template-areas:"head prices" "more prices";column-gap:var(--space-9);row-gap:var(--space-6);align-items:start}
+  .try-cta .btn{flex:0 0 auto}
+  .try::before{width:420px;height:420px;right:-140px;top:-340px}
+  .try::after{width:420px;height:420px;left:-140px;bottom:-340px}
+}
+
+/* --- visit: hours + map --------------------------------------------------- */
+.visit{background-color:var(--bg);
+  background-image:linear-gradient(rgba(184,29,36,.07) 2px,transparent 2px),linear-gradient(90deg,rgba(184,29,36,.07) 2px,transparent 2px);
+  background-size:240px 240px;background-position:-1px -1px}
+.visit-grid{display:grid;gap:var(--space-8)}
+.visit .status{margin-top:var(--space-5);font-size:var(--step-0);padding:10px 16px;border-radius:var(--r-pill);background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow-1)}
+.visit .status::before{background:var(--ink-soft)}
+.visit .status.is-open::before{background:#1E9E63}
+.visit .status.is-closed::before{background:var(--brand)}
+.hours{width:100%;margin-top:var(--space-5);border-collapse:separate;border-spacing:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-1);font-variant-numeric:tabular-nums}
+.hours th,.hours td{padding:14px 18px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
+.hours tr:last-child th,.hours tr:last-child td{border-bottom:0}
+.hours th{font-weight:600;position:relative}
+.hours td{text-align:right;white-space:nowrap}
+.hours .off td{color:var(--ink-soft)}
+.hours .is-today{background:var(--brand-tint)}
+.hours .is-today th::before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:4px;background:var(--brand);border-radius:0 2px 2px 0}
+.today-tag{display:inline-block;margin-left:8px;padding:2px 8px;border-radius:var(--r-pill);background:var(--brand);color:#fff;font-size:.75rem;font-weight:600;letter-spacing:.04em;vertical-align:2px}
+.hours-note{margin-top:var(--space-4);color:var(--ink-soft);font-size:var(--step--1);max-width:52ch}
+.place-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);box-shadow:var(--shadow-2);overflow:hidden}
+.map{position:relative;aspect-ratio:4/3;background:#E4E1DA}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.map-fallback{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:var(--space-5);color:var(--ink-soft)}
+.place-body{padding:var(--space-6) var(--space-5);display:grid;gap:var(--space-5)}
+.place-body address{font-style:normal;font:800 var(--step-2)/1.05 var(--font-display);text-transform:uppercase}
+.access{display:grid;gap:var(--space-4)}
+.access li{display:grid;grid-template-columns:auto 1fr;gap:var(--space-3);align-items:start}
+.access .ico{color:var(--brand);margin-top:3px}
+.place-actions{display:flex;flex-wrap:wrap;gap:var(--space-3)}
+.place-actions .btn{flex:1 1 180px}
+@media (min-width:960px){
+  .visit-grid{grid-template-columns:5fr 7fr;column-gap:var(--space-8);align-items:start}
+  .map{aspect-ratio:16/10}
+  .place-body{grid-template-columns:1fr 1fr;padding:var(--space-6)}
+  .place-body address,.place-actions,.access{grid-column:1 / -1}
+  .access{grid-template-columns:1fr 1fr;gap:var(--space-5)}
+  .place-actions .btn{flex:0 0 auto}
+}
+
+/* --- contact + footer ----------------------------------------------------- */
+.contact{background:var(--ink);color:var(--on-dark)}
+.contact-grid{display:grid;gap:var(--space-7)}
+.contact-list{border-top:1px solid var(--line-dark)}
+.contact-list a{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:var(--space-4);min-height:76px;padding-block:var(--space-4);border-bottom:1px solid var(--line-dark);text-decoration:none}
+.c-ico{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid var(--line-dark);color:var(--brand-bright);transition:transform .3s var(--ease)}
+.contact-list a:hover .c-ico{transform:scale(1.08)}
+.c-label{display:block;font-size:.8125rem;letter-spacing:.1em;text-transform:uppercase;color:var(--on-dark-soft)}
+.c-value{display:block;font:800 var(--step-2)/1.1 var(--font-display);text-transform:uppercase;overflow-wrap:anywhere}
+.c-value.lower{text-transform:none;font:600 var(--step-1)/1.3 var(--font-text)}
+.contact-list .arrow{color:var(--on-dark-soft);transition:transform .3s var(--ease)}
+.contact-list a:hover .arrow{transform:translateX(4px)}
+.contact-who{margin-top:var(--space-6);display:flex;gap:var(--space-4);align-items:center;color:var(--on-dark-soft);font-size:var(--step--1)}
+@media (min-width:960px){.contact-grid{grid-template-columns:5fr 7fr;column-gap:var(--space-8);align-items:start}}
+.site-footer{background:#0E1013;color:var(--on-dark-soft);padding-block:var(--space-8) var(--space-6);font-size:var(--step--1)}
+.footer-grid{display:grid;gap:var(--space-6)}
+.site-footer .brand{color:var(--on-dark)}
+.footer-links{display:flex;flex-wrap:wrap;gap:0 var(--space-2);margin-left:-10px}
+.footer-links a{display:inline-flex;align-items:center;min-height:44px;min-width:44px;padding:0 10px;text-decoration:none;color:var(--on-dark)}
+.footer-links a:hover{text-decoration:underline}
+.footer-social{display:inline-grid;place-items:center;width:44px;height:44px;border:1px solid var(--line-dark);border-radius:50%;color:var(--on-dark)}
+.footer-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--space-3);margin-top:var(--space-7);padding-top:var(--space-5);border-top:1px solid var(--line-dark)}
+@media (min-width:960px){.footer-grid{grid-template-columns:5fr 4fr 3fr;align-items:start}}
+
+/* --- sticky mobile action bar --------------------------------------------- */
+.action-bar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:repeat(3,1fr);
+  background:var(--ink);border-top:1px solid var(--line-dark);padding-bottom:env(safe-area-inset-bottom)}
+.action-bar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:var(--bar-h);color:var(--on-dark);text-decoration:none;font-weight:600;font-size:.9375rem}
+.action-bar a + a{border-left:1px solid var(--line-dark)}
+.action-bar a:first-child{background:var(--brand)}
+@media (min-width:768px){
+  body{padding-bottom:0}
+  .action-bar{display:none}
+}
+
+/* --- lightbox -------------------------------------------------------------- */
+.lightbox{width:100%;height:100%;max-width:100vw;max-height:100vh;margin:0;padding:0;border:0;background:transparent;color:#fff}
+.lightbox[open]{display:grid;place-items:center}
+.lightbox::backdrop{background:rgba(10,11,13,.94)}
+.lightbox figure{display:grid;justify-items:center;gap:var(--space-3);padding:72px var(--space-4) 96px}
+.lightbox img{width:auto;height:auto;max-width:min(94vw,1400px);max-height:calc(100dvh - 190px);object-fit:contain;border-radius:var(--r-sm)}
+.lightbox figcaption{color:var(--on-dark-soft);font-size:var(--step--1);text-align:center;max-width:60ch}
+.lb-btn{position:fixed;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;border:1px solid rgba(243,241,236,.3);background:rgba(243,241,236,.08);color:#fff;cursor:pointer;transition:transform .25s var(--ease)}
+.lb-btn:hover{transform:scale(1.06)}
+.lb-close{top:16px;right:16px}
+.lb-prev{left:calc(50% - 64px);bottom:24px}
+.lb-next{right:calc(50% - 64px);bottom:24px}
+@media (min-width:768px){
+  .lightbox figure{padding:72px 96px}
+  .lb-prev{left:24px;top:50%;bottom:auto;margin-top:-26px}
+  .lb-next{right:24px;top:50%;bottom:auto;margin-top:-26px}
+}
+html:has(.lightbox[open]){overflow:hidden}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;transition-delay:0s!important}
+  .hero-media img{animation:none}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+<!--sf:preview--><meta name="robots" content="noindex, nofollow"><!--/sf:preview-->
+<!--sf:og--><meta property="og:image" content="https://vo-vietnam-vo-sao-lim-arts-martiaux-au-mans.aymenjallouli.dev/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:url" content="https://vo-vietnam-vo-sao-lim-arts-martiaux-au-mans.aymenjallouli.dev/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://vo-vietnam-vo-sao-lim-arts-martiaux-au-mans.aymenjallouli.dev/og.jpg"><!--/sf:og-->
+</head>
+<body id="top">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-sms" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><path d="M3 11 22 2l-9 19-2-8-8-2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M19 12H5M11 18l-6-6 6-6"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h12"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-access" viewBox="0 0 24 24"><circle cx="11" cy="4" r="1.8"/><path d="M11 7.5V13h5l2.5 6"/><path d="M11 10h4.5"/><path d="M8.2 10.6a5.5 5.5 0 1 0 7.3 7.6"/></symbol>
+  <symbol id="i-shirt" viewBox="0 0 24 24"><path d="M20.4 6.6 16 3.5a4 4 0 0 1-8 0L3.6 6.6a1 1 0 0 0-.4 1.2l1.3 3a1 1 0 0 0 1.2.6L7 11v9a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-9l1.3.4a1 1 0 0 0 1.2-.6l1.3-3a1 1 0 0 0-.4-1.2z"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+  <symbol id="i-zoom" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="brand" href="#top" aria-label="Võ Viêtnam / Võ Sao Lim, retour en haut de page">
+      <svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="5" fill="#B81D24"/><rect x="5" y="5" width="26" height="26" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1.5"/><path d="M10.5 10h4.3l3.2 10.6L21.2 10h4.3l-5.2 16h-4.6z" fill="#fff"/></svg>
+      <span><span class="brand-name">Võ Sao Lim</span><span class="brand-sub">Võ Viêtnam · Le Mans</span></span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <ul>
+        <li><a href="#avis">Avis</a></li>
+        <li><a href="#ecole">L’école</a></li>
+        <li><a href="#essayer">Tarifs</a></li>
+        <li><a href="#horaires">Horaires</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-brand header-cta" href="tel:+33688289808"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>06 88 28 98 08</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu">
+      <svg class="ico i-open" aria-hidden="true"><use href="#i-menu"/></svg>
+      <svg class="ico i-close" aria-hidden="true"><use href="#i-close"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <nav aria-label="Menu mobile">
+    <a href="#avis">Avis <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a href="#ecole">L’école <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a href="#galerie">Au gymnase <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a href="#essayer">Tarifs &amp; essai <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a href="#horaires">Horaires &amp; accès <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a href="#contact">Contact <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </nav>
+  <div class="menu-actions">
+    <a class="btn btn-brand" href="tel:+33688289808"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Appeler le 06 88 28 98 08</a>
+    <p class="menu-addr">60 Rue Navarin, 72000 Le Mans</p>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-media">
+      <img src="assets/photos/photo-02.jpg" width="1067" height="1600" fetchpriority="high" decoding="async"
+           alt="Une pratiquante en posture basse, mains jointes, face à la lumière devant le mur rouge du gymnase">
+    </div>
+    <div class="hero-in">
+      <div class="hero-top">
+        <p class="eyebrow"><span>Arts martiaux <span class="lg-only">sino-vietnamiens </span>· Le Mans</span></p>
+        <h1 id="hero-title"><span>Võ Viêtnam</span><span class="h1-2">Võ Sao Lim</span></h1>
+        <a class="chip" href="https://www.google.com/maps/place/?q=place_id:ChIJXfwah1eP4kcRVUaHVbDwJDA" target="_blank" rel="noopener" aria-label="Note de 5 sur 5, 31 avis Google">
+          <svg class="ico" aria-hidden="true"><use href="#i-star"/></svg><strong>5,0</strong><span class="chip-sep">·</span>31 avis Google
+        </a>
+      </div>
+      <div class="hero-bottom">
+        <p class="hero-lead">Deux arts martiaux de la branche Shaolin, le soir, près de la gare. Novice ou confirmé, chacun progresse à son rythme.</p>
+        <div class="hero-cta">
+          <a class="btn btn-brand" href="tel:+33688289808"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Appeler pour un essai</a>
+          <a class="btn btn-ghost" href="#essayer">Tarifs et premier cours</a>
+        </div>
+        <p class="status" data-status aria-live="polite"></p>
+        <ul class="hero-facts">
+          <li><span>Le soir</span>18h30 – 20h30</li>
+          <li><span>Accueil</span>Dès 13 ans</li>
+          <li><span>Adhésion</span>120 € l’année</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section class="section proof" id="avis" aria-labelledby="avis-title">
+    <div class="wrap">
+      <div class="proof-head">
+        <div class="copy reveal">
+          <p class="eyebrow">Ce qu’en disent les adhérents</p>
+          <h2 class="h2" id="avis-title">Ici, chacun progresse à son rythme.</h2>
+          <p class="lead">Les avis se ressemblent&nbsp;: des encadrants pédagogues, une ambiance amicale, et un travail du corps autant que de l’esprit. Novices comme plus expérimentés.</p>
+        </div>
+        <div class="score reveal reveal-2">
+          <p class="score-num" aria-hidden="true">5,0</p>
+          <span class="stars" role="img" aria-label="Note moyenne 5 sur 5">
+            <svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg>
+          </span>
+          <p class="score-count" aria-label="31 avis Google"><span data-count="31" aria-hidden="true">31</span> <span aria-hidden="true">avis Google</span></p>
+          <a class="link-arrow" href="https://www.google.com/maps/place/?q=place_id:ChIJXfwah1eP4kcRVUaHVbDwJDA" target="_blank" rel="noopener">Voir les 31 avis sur Google <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+
+      <div class="rail-wrap reveal">
+        <div class="rail" id="rail" tabindex="0" role="region" aria-label="Avis Google, faites défiler horizontalement">
+          <figure class="review">
+            <span class="stars" role="img" aria-label="5 étoiles sur 5"><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg></span>
+            <blockquote><p>Très agréable, j'ai beaucoup appris. Les encadrants sont très pro et pédagogues. Une superbe ambiance, convient aux novices comme aux plus expérimentés.</p></blockquote>
+            <figcaption><span class="review-author">Benoît C.</span><span class="review-date">juillet 2026</span></figcaption>
+          </figure>
+          <figure class="review">
+            <span class="stars" role="img" aria-label="5 étoiles sur 5"><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg></span>
+            <blockquote><p>J'ai commencé en septembre 2024 , cet art martial qui répond à mes attentes. Après 7 mois , j'ai retrouvé du cardio , du physique. Les encadrants repondent à chaque sollicitation.  Je recommande cette école.</p></blockquote>
+            <figcaption><span class="review-author">Jérôme M.</span><span class="review-date">mars 2025</span></figcaption>
+          </figure>
+          <figure class="review">
+            <span class="stars" role="img" aria-label="5 étoiles sur 5"><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg></span>
+            <blockquote><p>Cette école ne se limitent pas aux techniques de combat, elles intègrent aussi une forme méditative, favorisant un équilibre entre le corps et l’esprit. Un respect envers soi-même, et envers les autres. …</p></blockquote>
+            <figcaption><span class="review-author">Coeurjoli</span><span class="review-date">mars 2025</span></figcaption>
+          </figure>
+          <figure class="review">
+            <span class="stars" role="img" aria-label="5 étoiles sur 5"><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg></span>
+            <blockquote><p>École d'art martial sérieuse ouverte et engagée. L'ambiance y est amicale et chacun progresse à son rythme. … Adhèrent depuis quelques années, je ne compte pas changer. …</p></blockquote>
+            <figcaption><span class="review-author">Florent C.</span><span class="review-date">juin 2024</span></figcaption>
+          </figure>
+          <figure class="review">
+            <span class="stars" role="img" aria-label="5 étoiles sur 5"><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg></span>
+            <blockquote><p>Adhérente depuis 2019, je ne peux qu'encourager les personnes qui souhaitent découvrir les arts martiaux ou bien enrichir leur pratique à rejoindre l'école. … vous serez toujours accueillis dans un esprit associatif amical et chaleureux. …</p></blockquote>
+            <figcaption><span class="review-author">Adèle J.</span><span class="review-date">juillet 2023</span></figcaption>
+          </figure>
+        </div>
+        <div class="rail-nav">
+          <button class="rail-btn" type="button" data-rail="prev" aria-controls="rail" aria-label="Avis précédent"><svg class="ico" aria-hidden="true"><use href="#i-arrow-l"/></svg></button>
+          <button class="rail-btn" type="button" data-rail="next" aria-controls="rail" aria-label="Avis suivant"><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          <p class="rail-hint">5 avis sur 31 · note Google 5,0</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHOOL -->
+  <section class="section school" id="ecole" aria-labelledby="ecole-title">
+    <div class="wrap school-grid">
+      <div class="school-main">
+        <div class="reveal">
+          <p class="eyebrow">L’école</p>
+          <h2 class="h2" id="ecole-title">Deux arts martiaux, une même branche Shaolin.</h2>
+          <p class="lead">Une école traditionnelle d’arts martiaux sino-vietnamiens. On y apprend les techniques de combat, et une forme méditative qui cherche l’équilibre entre le corps et l’esprit.</p>
+        </div>
+        <ol class="disciplines">
+          <li class="reveal">
+            <span class="num" aria-hidden="true">01</span>
+            <h3>Võ Vietnam</h3>
+            <p class="disc-sub">Thieu Lâm Tu</p>
+            <p>Dans l’enseignement de Maître Nguyen Duc Moc.</p>
+          </li>
+          <li class="reveal">
+            <span class="num" aria-hidden="true">02</span>
+            <h3>Kung Fu Sao Lim</h3>
+            <p class="disc-sub">Style Son Long Qûyen Thuât</p>
+            <p>Un style de la branche Thieu Lâm Tu (Shaolin), dans l’enseignement de Maître P'ng Chye Khim, de Malaisie.</p>
+          </li>
+        </ol>
+      </div>
+
+      <figure class="lineage reveal reveal-2">
+        <figcaption class="eyebrow">La transmission</figcaption>
+        <div class="lin-top">
+          <div class="lin-node"><span class="lin-role">Võ Vietnam</span><strong>Maître Nguyen Duc Moc</strong></div>
+          <div class="lin-node"><span class="lin-role">Sao Lim · Malaisie</span><strong>Maître P'ng Chye Khim</strong></div>
+        </div>
+        <div class="lin-join" aria-hidden="true"></div>
+        <div class="lin-node lin-main"><span class="lin-role">Fondateur de l’école</span><strong>René Bonneau</strong></div>
+        <p class="lin-school">Le Mans · association loi 1901 déclarée en 2007</p>
+        <blockquote>
+          <p>« … la personne au centre de cette école du Mans, René, dont les conseils, la patience, et la gentillesse donne une ambiance agréable et… »</p>
+          <cite>Coeurjoli, avis Google</cite>
+        </blockquote>
+      </figure>
+
+      <div class="practice reveal">
+        <div class="practice-in">
+          <h3>Ce que vous y travaillez</h3>
+          <dl>
+            <div>
+              <dt>Le corps</dt>
+              <dd>Souplesse, endurance, cardio.<small>« les entraînements améliorent ma souplesse, mon endurance et le cardio » · Coeurjoli</small></dd>
+            </div>
+            <div>
+              <dt>L’esprit</dt>
+              <dd>Une forme méditative, la patience, la confiance en soi, le respect de soi et des autres.</dd>
+            </div>
+            <div>
+              <dt>Le geste</dt>
+              <dd>Des stages pour mieux comprendre les gestes, les postures, et son propre corps.<small>« Les différents stages proposés sont riches d'informations » · Florent C.</small></dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section gallery on-dark" id="galerie" aria-labelledby="galerie-title">
+    <div class="wrap">
+      <div class="gallery-head reveal">
+        <div>
+          <p class="eyebrow">Au gymnase</p>
+          <h2 class="h2" id="galerie-title">Deux heures sur le tapis, de 18h30 à 20h30.</h2>
+        </div>
+        <p class="lead">Pieds nus, en tenue ample. Novices et plus expérimentés sur le même tapis, et des encadrants qui passent corriger, posture après posture.</p>
+      </div>
+      <div class="g-grid">
+        <button class="g-item g-wide g-a reveal" type="button" data-lb aria-label="Agrandir la photo : pratiquante en fente avant au milieu du groupe">
+          <img src="assets/photos/photo-05.jpg" width="1600" height="1067" loading="lazy" decoding="async" alt="Une pratiquante en fente avant, poing tendu, au milieu du groupe à l’entraînement">
+          <span class="g-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+        <button class="g-item g-b reveal reveal-2" type="button" data-lb aria-label="Agrandir la photo : un enseignant corrige le bras d’une élève">
+          <img src="assets/photos/photo-04.jpg" width="1067" height="1600" loading="lazy" decoding="async" alt="Un enseignant corrige la position du bras d’une élève">
+          <span class="g-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+        <button class="g-item g-c g-pos-03 reveal" type="button" data-lb aria-label="Agrandir la photo : un enseignant en veste rouge vérifie un coup de poing">
+          <img src="assets/photos/photo-03.jpg" width="1600" height="1067" loading="lazy" decoding="async" alt="Un enseignant en veste rouge vérifie la trajectoire d’un coup de poing">
+          <span class="g-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+        <button class="g-item g-wide g-d reveal reveal-2" type="button" data-lb aria-label="Agrandir la photo : cours collectif en posture">
+          <img src="assets/photos/photo-01.jpg" width="1600" height="1067" loading="lazy" decoding="async" alt="Cours collectif : les élèves en posture, bras tendu, pieds nus sur les tapis">
+          <span class="g-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRY / PRICES -->
+  <section class="section try on-brand" id="essayer" aria-labelledby="essayer-title">
+    <div class="wrap try-grid">
+      <div class="try-head reveal">
+        <p class="eyebrow">Essayer, puis adhérer</p>
+        <h2 class="h2" id="essayer-title">Venez essayer, à n’importe quel moment de l’année.</h2>
+        <p class="lead">La saison 2026-2027 a repris le lundi 7 septembre. Le cours de découverte reste ouvert toute l’année, dès 13 ans&nbsp;: appelez ou écrivez pour convenir de votre premier soir.</p>
+      </div>
+      <ul class="prices reveal reveal-2" aria-label="Tarifs">
+        <li class="price price-main">
+          <span class="price-amount">120 €</span>
+          <span class="price-label">Adhésion annuelle ados/adultes</span>
+          <span class="price-note">À partir de 13 ans</span>
+        </li>
+        <li class="price">
+          <span class="price-amount">90 €</span>
+          <span class="price-label">Adhésion annuelle, tarif réduit</span>
+          <span class="price-note">Étudiants, demandeurs d’emploi, familles nombreuses</span>
+        </li>
+        <li class="price price-discover">
+          <h3>Découverte</h3>
+          <span class="price-label">Cours de découverte du Võ Vietnam / Sao Lim</span>
+          <span class="price-note">Accueil toute l’année dès 13 ans</span>
+        </li>
+        <li><a class="link-arrow try-link" href="https://sites.google.com/site/artmartiallemans/home" target="_blank" rel="noopener">Adhésions&nbsp;: le site de l’association <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+      </ul>
+      <div class="try-more reveal">
+        <div class="try-cta">
+          <a class="btn btn-light" href="tel:+33688289808"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Appeler le 06 88 28 98 08</a>
+          <a class="btn btn-ghost" href="sms:+33688289808?&amp;body=Bonjour%2C%20je%20souhaiterais%20essayer%20un%20cours%20de%20V%C3%B5%20Vietnam%20%2F%20Sao%20Lim.%20Pouvez-vous%20m%27indiquer%20quand%20venir%20%3F%20Merci."><svg class="ico" aria-hidden="true"><use href="#i-sms"/></svg>Envoyer un SMS</a>
+        </div>
+        <dl class="bring">
+          <div>
+            <svg class="ico" aria-hidden="true"><use href="#i-shirt"/></svg>
+            <div><dt>Votre tenue</dt><dd>Des vêtements de sport amples. Pieds nus, ou en chaussures légères de kung-fu.</dd></div>
+          </div>
+          <div>
+            <svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>
+            <div><dt>Le lieu d’entraînement</dt><dd>Gymnase Dujarier, collège Saint-Joseph, rue de Fleurus, près de la gare.</dd></div>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOURS + LOCATION -->
+  <section class="section visit" id="horaires" aria-labelledby="horaires-title">
+    <div class="wrap visit-grid">
+      <div class="reveal">
+        <p class="eyebrow">Horaires &amp; accès</p>
+        <h2 class="h2" id="horaires-title">Le soir, de 18h30 à 20h30.</h2>
+        <p class="status" data-status aria-live="polite"></p>
+        <table class="hours">
+          <caption class="sr-only">Horaires de la semaine</caption>
+          <tbody>
+            <tr data-day="1"><th scope="row">Lundi</th><td>18h30 – 20h30</td></tr>
+            <tr data-day="2" class="off"><th scope="row">Mardi</th><td>Fermé</td></tr>
+            <tr data-day="3"><th scope="row">Mercredi</th><td>18h30 – 20h30</td></tr>
+            <tr data-day="4" class="off"><th scope="row">Jeudi</th><td>Fermé</td></tr>
+            <tr data-day="5"><th scope="row">Vendredi</th><td>18h30 – 20h30</td></tr>
+            <tr data-day="6" class="off"><th scope="row">Samedi</th><td>Fermé</td></tr>
+            <tr data-day="0" class="off"><th scope="row">Dimanche</th><td>Fermé</td></tr>
+          </tbody>
+        </table>
+        <p class="hours-note">Pour un premier cours, un coup de fil la veille permet de vérifier le créneau et le lieu du soir.</p>
+      </div>
+
+      <div class="place-card reveal reveal-2">
+        <div class="map">
+          <p class="map-fallback"><a href="https://www.google.com/maps/place/?q=place_id:ChIJXfwah1eP4kcRVUaHVbDwJDA" target="_blank" rel="noopener">Ouvrir la carte dans Google Maps</a></p>
+          <iframe src="https://www.google.com/maps?q=V%C3%B5%20Vi%C3%AAtnam%20%2F%20V%C3%B5%20Sao%20Lim%20-%20Arts%20Martiaux%20au%20Mans%2C%2060%20Rue%20Navarin%2C%2072000%20Le%20Mans&amp;output=embed"
+                  title="Carte : Võ Viêtnam / Võ Sao Lim, 60 Rue Navarin, Le Mans" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+        <div class="place-body">
+          <address>60 Rue Navarin<br>72000 Le Mans</address>
+          <ul class="access">
+            <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span>Entraînements au gymnase Dujarier (collège Saint-Joseph), rue de Fleurus, près de la gare.</span></li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-access"/></svg><span>Entrée et parking accessibles en fauteuil roulant.</span></li>
+          </ul>
+          <div class="place-actions">
+            <a class="btn btn-brand" href="https://www.google.com/maps/dir/?api=1&amp;destination=V%C3%B5%20Vi%C3%AAtnam%20%2F%20V%C3%B5%20Sao%20Lim%20-%20Arts%20Martiaux%20au%20Mans%2C%2060%20Rue%20Navarin%2C%2072000%20Le%20Mans" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-route"/></svg>Itinéraire</a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/place/?q=place_id:ChIJXfwah1eP4kcRVUaHVbDwJDA" target="_blank" rel="noopener">Voir sur Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact on-dark" id="contact" aria-labelledby="contact-title">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <p class="eyebrow">Contact</p>
+        <h2 class="h2" id="contact-title">Le plus simple&nbsp;: un appel.</h2>
+        <p class="lead">Au bout du fil, Thierry Vilchien, président de l’association. Vous préférez écrire&nbsp;? Un SMS ou un e-mail fera l’affaire.</p>
+      </div>
+      <ul class="contact-list reveal reveal-2">
+        <li><a href="tel:+33688289808">
+          <span class="c-ico"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></span>
+          <span><span class="c-label">Téléphone</span><span class="c-value">06 88 28 98 08</span></span>
+          <svg class="ico arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        <li><a href="sms:+33688289808?&amp;body=Bonjour%2C%20je%20souhaiterais%20essayer%20un%20cours%20de%20V%C3%B5%20Vietnam%20%2F%20Sao%20Lim.%20Pouvez-vous%20m%27indiquer%20quand%20venir%20%3F%20Merci.">
+          <span class="c-ico"><svg class="ico" aria-hidden="true"><use href="#i-sms"/></svg></span>
+          <span><span class="c-label">SMS, message prérempli</span><span class="c-value">Demander un essai</span></span>
+          <svg class="ico arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        <li><a href="mailto:vovietnam72@gmail.com?subject=Cours%20de%20d%C3%A9couverte&amp;body=Bonjour%2C%0A%0AJe%20souhaiterais%20essayer%20un%20cours%20de%20V%C3%B5%20Vietnam%20%2F%20Sao%20Lim.%20Pouvez-vous%20m%27indiquer%20quand%20venir%20%3F%0A%0AMerci.">
+          <span class="c-ico"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg></span>
+          <span><span class="c-label">E-mail</span><span class="c-value lower">vovietnam72@gmail.com</span></span>
+          <svg class="ico arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        <li><a href="https://www.facebook.com/vosaolimlemans/" target="_blank" rel="noopener">
+          <span class="c-ico"><svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg></span>
+          <span><span class="c-label">Facebook</span><span class="c-value lower">vosaolimlemans</span></span>
+          <svg class="ico arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        <li><a href="https://sites.google.com/site/artmartiallemans/home" target="_blank" rel="noopener">
+          <span class="c-ico"><svg class="ico" aria-hidden="true"><use href="#i-web"/></svg></span>
+          <span><span class="c-label">Site de l’association</span><span class="c-value lower">Adhésions et présentation</span></span>
+          <svg class="ico arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer on-dark">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="brand" href="#top" aria-label="Võ Viêtnam / Võ Sao Lim, retour en haut de page">
+        <svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="5" fill="#B81D24"/><rect x="5" y="5" width="26" height="26" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1.5"/><path d="M10.5 10h4.3l3.2 10.6L21.2 10h4.3l-5.2 16h-4.6z" fill="#fff"/></svg>
+        <span><span class="brand-name">Võ Sao Lim</span><span class="brand-sub">Võ Viêtnam · Le Mans</span></span>
+      </a>
+      <p style="margin-top:var(--space-4);max-width:40ch">École d’arts martiaux sino-vietnamiens. Association loi 1901 « Vo Sao Lim / Vo Vietnam du CCAVN ».</p>
+    </div>
+    <div>
+      <p>60 Rue Navarin, 72000 Le Mans</p>
+      <p><a href="tel:+33688289808">06 88 28 98 08</a> · <a href="mailto:vovietnam72@gmail.com">vovietnam72@gmail.com</a></p>
+    </div>
+    <div>
+      <nav aria-label="Liens de bas de page">
+        <ul class="footer-links">
+          <li><a href="#avis">Avis</a></li>
+          <li><a href="#ecole">L’école</a></li>
+          <li><a href="#essayer">Tarifs</a></li>
+          <li><a href="#horaires">Horaires</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="footer-social" href="https://www.facebook.com/vosaolimlemans/" target="_blank" rel="noopener" aria-label="Facebook de l’école"><svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg></a>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© <span data-year></span> Võ Viêtnam / Võ Sao Lim, Le Mans</p>
+    <p>RNA W723004967</p>
+  </div>
+</footer>
+
+<nav class="action-bar" aria-label="Actions rapides">
+  <a href="tel:+33688289808"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Appeler</a>
+  <a href="sms:+33688289808?&amp;body=Bonjour%2C%20je%20souhaiterais%20essayer%20un%20cours%20de%20V%C3%B5%20Vietnam%20%2F%20Sao%20Lim.%20Pouvez-vous%20m%27indiquer%20quand%20venir%20%3F%20Merci."><svg class="ico" aria-hidden="true"><use href="#i-sms"/></svg>SMS</a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=V%C3%B5%20Vi%C3%AAtnam%20%2F%20V%C3%B5%20Sao%20Lim%20-%20Arts%20Martiaux%20au%20Mans%2C%2060%20Rue%20Navarin%2C%2072000%20Le%20Mans" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-route"/></svg>Itinéraire</a>
+</nav>
+
+<dialog class="lightbox" id="lightbox" aria-label="Photo agrandie">
+  <figure>
+    <img alt="">
+    <figcaption></figcaption>
+  </figure>
+  <button class="lb-btn lb-close" type="button" data-lb-act="close" aria-label="Fermer"><svg class="ico" aria-hidden="true"><use href="#i-close"/></svg></button>
+  <button class="lb-btn lb-prev" type="button" data-lb-act="prev" aria-label="Photo précédente"><svg class="ico" aria-hidden="true"><use href="#i-arrow-l"/></svg></button>
+  <button class="lb-btn lb-next" type="button" data-lb-act="next" aria-label="Photo suivante"><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+</dialog>
+
+<script>
+(() => {
+  const d = document, root = d.documentElement;
+  root.classList.add('js');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const hasIO = 'IntersectionObserver' in window;
+
+  d.querySelectorAll('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
+
+  /* Menu: aria-expanded, Esc, scroll lock, links close it */
+  const menuBtn = d.querySelector('.menu-btn'), menu = d.getElementById('mobile-menu');
+  const setMenu = open => {
+    menuBtn.setAttribute('aria-expanded', open);
+    menuBtn.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+    menu.classList.toggle('is-open', open);
+    root.classList.toggle('menu-open', open);
+  };
+  menuBtn.addEventListener('click', () => setMenu(menuBtn.getAttribute('aria-expanded') !== 'true'));
+  menu.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
+  d.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && menuBtn.getAttribute('aria-expanded') === 'true') { setMenu(false); menuBtn.focus(); }
+  });
+  matchMedia('(min-width: 1024px)').addEventListener('change', e => { if (e.matches) setMenu(false); });
+
+  /* Hours: live badge + today's row (Europe/Paris time) */
+  const HOURS = {"lundi":"18:30–20:30","mardi":"Fermé","mercredi":"18:30–20:30","jeudi":"Fermé","vendredi":"18:30–20:30","samedi":"Fermé","dimanche":"Fermé"};
+  const DAYS = ['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
+  const toMin = s => { const m = s.trim().match(/(\d{1,2})\s*[:h.]?\s*(\d{2})?/); return m ? (+m[1]) * 60 + (+(m[2] || 0)) : null; };
+  const parse = v => {
+    v = String(v || '').trim();
+    if (!v || /ferm|closed/i.test(v)) return [];
+    if (/24\s*h|24\/24|24 heures|24 hours/i.test(v)) return [[0, 1440]];
+    return v.split(/[,;]|\bet\b/).map(r => {
+      const p = r.split(/\s*[–—-]\s*|\s+à\s+/);
+      if (p.length < 2) return null;
+      const a = toMin(p[0]); let b = toMin(p[1]);
+      if (a === null || b === null) return null;
+      if (b <= a) b += 1440;
+      return [a, b];
+    }).filter(Boolean);
+  };
+  const week = DAYS.map(k => parse(HOURS[k]));
+  const fmt = m => { m %= 1440; const h = Math.floor(m / 60), mm = m % 60; return h + 'h' + (mm ? String(mm).padStart(2, '0') : ''); };
+  let now;
+  try {
+    const p = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Paris', weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(new Date());
+    const g = t => p.find(x => x.type === t).value;
+    now = { day: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(g('weekday')), min: (+g('hour') % 24) * 60 + (+g('minute')) };
+    if (now.day < 0) throw 0;
+  } catch (e) { const t = new Date(); now = { day: t.getDay(), min: t.getHours() * 60 + t.getMinutes() }; }
+
+  let until = null, allDay = false;
+  week[now.day].forEach(([a, b]) => { if (now.min >= a && now.min < b) { until = b; allDay = b - a >= 1440; } });
+  week[(now.day + 6) % 7].forEach(([a, b]) => { if (b > 1440 && now.min < b - 1440) until = b; });
+  let label, open = until !== null;
+  if (open) label = allDay ? 'Ouvert 24h/24' : 'Ouvert maintenant · jusqu’à ' + fmt(until);
+  else {
+    label = 'Fermé';
+    for (let i = 0; i < 8; i++) {
+      const di = (now.day + i) % 7;
+      const starts = week[di].map(r => r[0]).filter(a => i > 0 || a > now.min).sort((x, y) => x - y);
+      if (starts.length) {
+        const when = i === 0 ? '' : i === 1 ? 'demain ' : DAYS[di] + ' ';
+        label = 'Fermé · ouvre ' + when + 'à ' + fmt(starts[0]);
+        break;
+      }
+    }
+  }
+  d.querySelectorAll('[data-status]').forEach(el => { el.textContent = label; el.classList.add(open ? 'is-open' : 'is-closed'); });
+  d.querySelectorAll('tr[data-day="' + now.day + '"]').forEach(tr => {
+    tr.classList.add('is-today');
+    tr.setAttribute('aria-current', 'date');
+    const tag = d.createElement('span'); tag.className = 'today-tag'; tag.textContent = 'Aujourd’hui';
+    tr.querySelector('th').appendChild(tag);
+  });
+
+  /* Scroll reveals */
+  const reveals = d.querySelectorAll('.reveal');
+  if (hasIO && !reduce) {
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+    }), { rootMargin: '0px 0px -6% 0px', threshold: 0.08 });
+    reveals.forEach(el => io.observe(el));
+  } else reveals.forEach(el => el.classList.add('is-in'));
+
+  /* Count-up on the review count */
+  if (hasIO && !reduce) d.querySelectorAll('[data-count]').forEach(el => {
+    const n = +el.dataset.count; el.textContent = '0';
+    const o = new IntersectionObserver(es => {
+      if (!es[0].isIntersecting) return; o.disconnect();
+      const t0 = performance.now(), dur = 1200;
+      const step = t => { const k = Math.min(1, (t - t0) / dur); el.textContent = Math.round(n * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); };
+      requestAnimationFrame(step);
+    }, { threshold: 0.6 });
+    o.observe(el);
+  });
+
+  /* Review rail */
+  const rail = d.getElementById('rail');
+  const railBtns = d.querySelectorAll('[data-rail]');
+  const syncRail = () => {
+    const max = rail.scrollWidth - rail.clientWidth - 2;
+    railBtns.forEach(b => { b.disabled = b.dataset.rail === 'prev' ? rail.scrollLeft <= 2 : rail.scrollLeft >= max; });
+  };
+  railBtns.forEach(b => b.addEventListener('click', () => {
+    const card = rail.querySelector('.review');
+    rail.scrollBy({ left: (b.dataset.rail === 'next' ? 1 : -1) * (card.getBoundingClientRect().width + 16), behavior: reduce ? 'auto' : 'smooth' });
+  }));
+  rail.addEventListener('scroll', syncRail, { passive: true });
+  addEventListener('resize', syncRail);
+  syncRail();
+
+  /* Gallery lightbox (<dialog>) */
+  const lb = d.getElementById('lightbox'), lbImg = lb.querySelector('img'), lbCap = lb.querySelector('figcaption');
+  const items = [...d.querySelectorAll('[data-lb]')];
+  let cur = 0, opener = null;
+  const show = i => {
+    cur = (i + items.length) % items.length;
+    const im = items[cur].querySelector('img');
+    lbImg.src = im.getAttribute('src'); lbImg.alt = im.alt;
+    lbCap.textContent = im.alt + ' · ' + (cur + 1) + '/' + items.length;
+  };
+  items.forEach((b, i) => b.addEventListener('click', () => {
+    opener = b; show(i);
+    if (typeof lb.showModal === 'function') lb.showModal(); else lb.setAttribute('open', '');
+  }));
+  lb.addEventListener('click', e => {
+    const t = e.target.closest('[data-lb-act]');
+    if (t) { const a = t.dataset.lbAct; if (a === 'close') lb.close(); else show(cur + (a === 'next' ? 1 : -1)); }
+    else if (e.target === lb || e.target.tagName === 'FIGURE') lb.close();
+  });
+  lb.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') show(cur + 1);
+    if (e.key === 'ArrowLeft') show(cur - 1);
+  });
+  let x0 = null;
+  lb.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend', e => {
+    if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; x0 = null;
+    if (Math.abs(dx) > 50) show(cur + (dx < 0 ? 1 : -1));
+  });
+  lb.addEventListener('close', () => { if (opener) opener.focus(); });
+})();
+</script>
+<!--sf:preview--><div style="padding:18px 16px;font:13px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;text-align:center;background:#0f0f10;color:#a3a3a8">Aperçu réalisé par Aymen Jallouli pour Võ Viêtnam / Võ Sao Lim - Arts Martiaux au Mans : ce site n'est pas encore le site officiel de l'établissement.</div><!--/sf:preview-->
+<!--sf:track--><script>(function(){try{var q=new URLSearchParams(location.search),r=q.get('r')||sessionStorage.getItem('sf_r');if(!r)return;sessionStorage.setItem('sf_r',r);navigator.sendBeacon("https://track.aymenjallouli.dev/t"+'?r='+encodeURIComponent(r)+'&p='+encodeURIComponent(location.pathname));}catch(e){}})();</script><!--/sf:track-->
+</body>
+</html>
